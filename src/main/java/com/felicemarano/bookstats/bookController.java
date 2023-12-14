@@ -14,7 +14,7 @@ public class bookController {
     @PostMapping("/verify")
     public ResponseEntity<String> verifyPost(@RequestBody String message) {
         // Verifica del messaggio ricevuto
-        if ("ciao".equalsIgnoreCase(message)) {
+        if ("Ciao".equalsIgnoreCase(message)) {
             return ResponseEntity.ok("Verifica riuscita. Messaggio ricevuto: " + message);
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Verifica fallita. Messaggio non valido.");
